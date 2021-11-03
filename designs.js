@@ -11,6 +11,7 @@ let grid = document.getElementById("pixelCanvas");
 // Form
 let form = document.getElementById("sizePicker");
 
+let cell = '';
 // When size is submitted by the user, call makeGrid()
 form.addEventListener("submit", function (event){
   event.preventDefault();
@@ -27,8 +28,9 @@ function makeGrid(height, width){
     let row = grid.insertRow(i);
     for (let x=0; x<width.value; x++){
       let cell = row.insertCell(x);
+      cell.addEventListener("click", function (click){
+        click.target.style.backgroudColor = gridColor.value;
+      });
     };
   };
 };
-
-gridColor.addEventListener()
