@@ -28,9 +28,10 @@ function makeGrid(height, width){
     let row = grid.insertRow(i);
     for (let x=0; x<width.value; x++){
       let cell = row.insertCell(x);
-      cell.addEventListener("click", function (click){
-        click.target.style.backgroudColor = gridColor.value;
-      });
     };
   };
 };
+
+grid.addEventListener("click", function (click){
+  click.target.style.backgroundColor = gridColor.value;
+});
