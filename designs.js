@@ -21,7 +21,7 @@ form.addEventListener("submit", function (event){
 // Function makeGrid()
 function makeGrid(height, width){
   // Table style
-  grid.style.width = "100%";
+  // grid.style.width = "100%";
   grid.style.border = "1px solid black";
 
   for (var i=0; i<height.value; i++){
