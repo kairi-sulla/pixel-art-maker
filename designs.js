@@ -38,6 +38,7 @@ function makeGrid(height, width){
 // Adds an eventlistener for a click in the grid
 grid.addEventListener("click", function (click){
   // targets the cell that was clicked and colors it the value chosen in the colorPicker
+  // if function runs the coloring only when click is made on table data area, not on border
   if (click.target.nodeName === 'TD') {
     click.target.style.backgroundColor = gridColor.value;
   }
